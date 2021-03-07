@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { AppColors } from '../../styles/types';
-import { defaultContainerHorizontalPadding } from '../../styles/constants';
 
 export const Container = styled.div`
   background: ${AppColors.LIGHT_BACKGROUND};
@@ -16,9 +15,6 @@ export const Container = styled.div`
   right: 0;
   left: 0;
   z-index: 9999;
-
-  padding-left: ${defaultContainerHorizontalPadding};
-  padding-right: ${defaultContainerHorizontalPadding};
 
   .header__flex-wrapper {
     display: flex;

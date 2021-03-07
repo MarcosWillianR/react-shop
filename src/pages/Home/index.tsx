@@ -75,7 +75,7 @@ const Home: React.FC = () => {
     <Container>
       <Header SearchComponent={<Search onSearch={handleSearch} />} />
 
-      <MaxContentSizeWrapper>
+      <MaxContentSizeWrapper className="home__wrapper">
         <BannerContent>
           <img src={banner} alt="RosaMarket - Compre sem sair de casa" />
         </BannerContent>

@@ -14,12 +14,11 @@ const fontSizes: FontSizes = {
   LARGE: `${calcFontRemValue(24)}rem` as '1.5rem',
 };
 
-const defaultContainerHorizontalPadding = '18px';
-
 const MaxContentSizeWrapper = styled.div`
   width: 100%;
-  max-width: 1020px;
+  max-width: 1056px;
   margin: 0 auto;
+  padding: 0 18px;
 `;
 
 const LogoTitle = styled.button`
@@ -37,7 +36,6 @@ const defaultIconSize = 24;
 export {
   fontSizes,
   MaxContentSizeWrapper,
-  defaultContainerHorizontalPadding,
   LogoTitle,
   DefaultBoxShadow,
   defaultIconSize,

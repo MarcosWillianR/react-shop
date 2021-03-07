@@ -9,7 +9,6 @@ export const Container = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 32px;
-    padding: 0 18px;
   }
 `;
 

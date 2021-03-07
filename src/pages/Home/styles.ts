@@ -66,7 +66,7 @@ export const CategorySelectButton = styled.button`
 
 export const ProductList = styled.main`
   display: grid;
-  grid-template-columns: repeat(3, 319px);
+  grid-template-columns: repeat(3, minmax(219px, 1fr));
   grid-gap: 30px;
   margin: 32px 0;
 `;
