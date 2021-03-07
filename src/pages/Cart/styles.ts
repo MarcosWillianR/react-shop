@@ -15,6 +15,8 @@ export const Container = styled.div`
 `;
 
 export const CartProductList = styled.div`
+  max-height: 100vh;
+  overflow: auto;
   display: grid;
   grid-template-columns: 420px;
   grid-gap: 32px;
