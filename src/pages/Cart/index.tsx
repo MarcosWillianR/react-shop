@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import Search from '../../components/Search';
@@ -15,6 +16,8 @@ import {
   removeProductFromCart,
   clearCart,
 } from '../../store/modules/cart/actions';
+
+import { useModal } from '../../hooks/Modal';
 
 import { priceFormatter, getDateDifference } from '../../utils';
 
@@ -37,6 +40,8 @@ interface ChangeProductQuantityProps {
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
+  const { showInfoModal, closeInfoModal, infoModalIsVisible } = useModal();
+  const history = useHistory();
 
   const { cartTimeout, items, totalAmount } = useSelector<IState, ICartState>(
     state => state.cart,
@@ -70,11 +75,64 @@ const Cart: React.FC = () => {
     totalAmount,
   ]);
 
+  const showEndCountDownModal = useCallback(() => {
+    if (!infoModalIsVisible) {
+      return showInfoModal({
+        infoStatus: 'warning',
+        title: 'Tempo esgotado, produtos removidos do carrinho',
+        description:
+          'Você já está a mais de 15 minutos com esses produtos no carrinho, você será redirecionado até a página inicial',
+        warningCallback: () => {
+          dispatch(clearCart());
+          closeInfoModal();
+          history.push('/');
+        },
+      });
+    }
+
+    return null;
+  }, [closeInfoModal, dispatch, history, infoModalIsVisible, showInfoModal]);
+
+  const handleFinishPayment = useCallback(() => {
+    if (!infoModalIsVisible) {
+      dispatch(clearCart());
+
+      return showInfoModal({
+        infoStatus: 'success',
+        title: 'Pedido realizado com sucesso!',
+        description: 'Eba! seu pedido foi feito, agora é só esperar.',
+        successCallback: () => {
+          closeInfoModal();
+          history.push('/');
+        },
+      });
+    }
+
+    return null;
+  }, [closeInfoModal, dispatch, history, infoModalIsVisible, showInfoModal]);
+
   useEffect(() => {
     if (items.length > 0) {
       dispatch(calcCartTotalValue());
+    } else if (!items.length && !infoModalIsVisible) {
+      showInfoModal({
+        infoStatus: 'warning',
+        title: 'Sem produtos no carrinho',
+        description: 'Você será redirecionado até a página inicial',
+        warningCallback: () => {
+          closeInfoModal();
+          history.push('/');
+        },
+      });
     }
-  }, [dispatch, items]);
+  }, [
+    closeInfoModal,
+    dispatch,
+    history,
+    infoModalIsVisible,
+    items,
+    showInfoModal,
+  ]);
 
   useEffect(() => {
     let countDownTimeout: NodeJS.Timeout;
@@ -89,8 +147,10 @@ const Cart: React.FC = () => {
           now,
         );
 
-        if (!minutes && !seconds) {
-          return dispatch(clearCart());
+        if (minutes <= 0 && seconds <= 0) {
+          setCountdownCart('00:00');
+
+          return showEndCountDownModal();
         }
 
         const minutesFormatted = String(minutes).padStart(2, '0');
@@ -110,7 +170,7 @@ const Cart: React.FC = () => {
     }
 
     return () => clearTimeout(countDownTimeout);
-  }, [cartTimeout, dispatch]);
+  }, [cartTimeout, showEndCountDownModal]);
 
   return (
     <Container>
@@ -211,7 +271,9 @@ const Cart: React.FC = () => {
               </p>
             </div>
 
-            <Button size="medium">Finalizar compra</Button>
+            <Button size="medium" onClick={handleFinishPayment}>
+              Finalizar compra
+            </Button>
           </CartFinishPaymentContent>
         </div>
       </MaxContentSizeWrapper>

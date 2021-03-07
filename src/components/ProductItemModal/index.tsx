@@ -1,4 +1,10 @@
-import React, { useCallback, MouseEvent, useState, useMemo } from 'react';
+import React, {
+  useCallback,
+  MouseEvent,
+  useState,
+  useMemo,
+  useEffect,
+} from 'react';
 import ReactDOM from 'react-dom';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
@@ -13,7 +19,7 @@ import { useModal } from '../../hooks/Modal';
 import { addProductToCart } from '../../store/modules/cart/actions';
 import { IProduct } from '../../store/modules/cart/types';
 
-import { priceFormatter } from '../../utils';
+import { priceFormatter, modalRoot } from '../../utils';
 
 import {
   Container,
@@ -23,14 +29,11 @@ import {
 } from './styles';
 
 const ProductItemModal: React.FC = () => {
-  const {
-    closeProductItemModal,
-    productItemModalIsVisible,
-    productItemModalData,
-  } = useModal();
+  const { closeProductItemModal, productItemModalData } = useModal();
   const dispatch = useDispatch();
 
   const [itemQuantity, setItemQuantity] = useState(1);
+  const [modalElement] = useState(document.createElement('div'));
 
   const handleClickOutside = useCallback(
     (event: MouseEvent<HTMLDivElement>) => {
@@ -74,12 +77,16 @@ const ProductItemModal: React.FC = () => {
     return '';
   }, [itemQuantity, productItemModalData]);
 
+  useEffect(() => {
+    modalRoot.appendChild(modalElement);
+
+    return () => {
+      modalRoot.removeChild(modalElement);
+    };
+  }, [modalElement]);
+
   return ReactDOM.createPortal(
-    <Container
-      onClick={handleClickOutside}
-      className="productItemModal"
-      isVisible={productItemModalIsVisible}
-    >
+    <Container onClick={handleClickOutside} className="productItemModal">
       <div className="productItemModal__content">
         {productItemModalData && (
           <>
@@ -138,7 +145,7 @@ const ProductItemModal: React.FC = () => {
         )}
       </div>
     </Container>,
-    document.getElementById('modal-root') as Element,
+    modalElement,
   );
 };
 

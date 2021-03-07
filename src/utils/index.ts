@@ -2,6 +2,8 @@ import { differenceInMinutes, differenceInSeconds } from 'date-fns';
 
 import { GetDateDifferenceResponse } from './types';
 
+const modalRoot = document.getElementById('modal-root') as HTMLElement;
+
 const priceFormatter = (value: number): string => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -19,4 +21,4 @@ const getDateDifference = (
   return { minutes, seconds };
 };
 
-export { priceFormatter, getDateDifference };
+export { priceFormatter, getDateDifference, modalRoot };

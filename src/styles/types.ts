@@ -23,4 +23,6 @@ export enum AppColors {
   PLACEHOLDER_TEXT_COLOR = '#ACACAD',
   MODAL_BACKGROUND = 'rgba(0,0,0, 0.6)',
   SUCCESS_COLOR = '#5cb85c',
+  ERROR_COLOR = '#ff3333',
+  WARNING_COLOR = '#eb942b',
 }

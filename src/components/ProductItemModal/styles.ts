@@ -3,16 +3,12 @@ import styled from 'styled-components';
 import { AppColors, FontWeights } from '../../styles/types';
 import { fontSizes } from '../../styles/constants';
 
-interface ContainerProps {
-  isVisible: boolean;
-}
-
 interface SubQuantityButtonProps {
   disabled: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
-  display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
+export const Container = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
 

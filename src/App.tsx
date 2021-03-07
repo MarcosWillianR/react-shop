@@ -5,7 +5,6 @@ import Router from './routes';
 
 import store from './store';
 
-import ProductItemModal from './components/ProductItemModal';
 import Footer from './components/Footer';
 
 import AppProvider from './hooks';
@@ -17,8 +16,6 @@ const App: React.FC = () => (
     <Provider store={store}>
       <AppProvider>
         <Router />
-
-        <ProductItemModal />
         <Footer />
       </AppProvider>
     </Provider>
