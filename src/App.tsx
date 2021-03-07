@@ -5,11 +5,15 @@ import Router from './routes';
 
 import store from './store';
 
+import GlobalStyle from './styles/global';
+
 const App: React.FC = () => (
   <BrowserRouter>
     <Provider store={store}>
       <Router />
     </Provider>
+
+    <GlobalStyle />
   </BrowserRouter>
 );
 
