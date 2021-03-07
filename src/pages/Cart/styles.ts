@@ -4,7 +4,7 @@ import { AppColors, FontWeights } from '../../styles/types';
 import { fontSizes } from '../../styles/constants';
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 
   .cart__wrapper {
     display: flex;
@@ -15,8 +15,6 @@ export const Container = styled.div`
 `;
 
 export const CartProductList = styled.div`
-  max-height: 100vh;
-  overflow: auto;
   display: grid;
   grid-template-columns: 420px;
   grid-gap: 32px;
