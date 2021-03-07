@@ -5,12 +5,22 @@ import Router from './routes';
 
 import store from './store';
 
+import ProductItemModal from './components/ProductItemModal';
+import Footer from './components/Footer';
+
+import AppProvider from './hooks';
+
 import GlobalStyle from './styles/global';
 
 const App: React.FC = () => (
   <BrowserRouter>
     <Provider store={store}>
-      <Router />
+      <AppProvider>
+        <Router />
+
+        <ProductItemModal />
+        <Footer />
+      </AppProvider>
     </Provider>
 
     <GlobalStyle />

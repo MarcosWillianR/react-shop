@@ -1,3 +1,7 @@
+import { differenceInMinutes, differenceInSeconds } from 'date-fns';
+
+import { GetDateDifferenceResponse } from './types';
+
 const priceFormatter = (value: number): string => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -5,4 +9,14 @@ const priceFormatter = (value: number): string => {
   }).format(value);
 };
 
-export { priceFormatter };
+const getDateDifference = (
+  date: Date,
+  today: Date,
+): GetDateDifferenceResponse => {
+  const minutes = differenceInMinutes(date, today) % 60;
+  const seconds = differenceInSeconds(date, today) % 60;
+
+  return { minutes, seconds };
+};
+
+export { priceFormatter, getDateDifference };

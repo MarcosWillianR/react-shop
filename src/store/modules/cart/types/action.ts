@@ -6,43 +6,49 @@ export enum ActionTypes {
   decreaseCartProduct = 'DECREASE_CART_PRODUCT',
   increaseCartProduct = 'INCREASE_CART_PRODUCT',
   calcCartTotalValue = 'CALC_CART_TOTAL_VALUE',
+  clearCart = 'CLEAR_CART',
 }
 
-export interface addProductToCartAction {
+export interface AddProductToCartAction {
   type: ActionTypes.addProductToCart;
   payload: {
     product: IProduct;
   };
 }
 
-export interface decreaseCartProductAction {
+export interface DecreaseCartProductAction {
   type: ActionTypes.decreaseCartProduct;
   payload: {
     productId: number;
   };
 }
 
-export interface increaseCartProductAction {
+export interface IncreaseCartProductAction {
   type: ActionTypes.increaseCartProduct;
   payload: {
     productId: number;
   };
 }
 
-export interface removeProductFromCartAction {
+export interface RemoveProductFromCartAction {
   type: ActionTypes.removeProductFromCart;
   payload: {
     productId: number;
   };
 }
 
-export interface calcCartTotalValueAction {
+export interface CalcCartTotalValueAction {
   type: ActionTypes.calcCartTotalValue;
 }
 
+export interface ClearCart {
+  type: ActionTypes.clearCart;
+}
+
 export type Action =
-  | addProductToCartAction
-  | decreaseCartProductAction
-  | increaseCartProductAction
-  | removeProductFromCartAction
-  | calcCartTotalValueAction;
+  | AddProductToCartAction
+  | DecreaseCartProductAction
+  | IncreaseCartProductAction
+  | RemoveProductFromCartAction
+  | CalcCartTotalValueAction
+  | ClearCart;

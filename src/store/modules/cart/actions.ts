@@ -1,43 +1,59 @@
-import { ActionCreator, Action } from 'redux';
 import { IProduct } from './types';
-import { ActionTypes } from './types/action';
+import {
+  ActionTypes,
+  AddProductToCartAction,
+  DecreaseCartProductAction,
+  IncreaseCartProductAction,
+  RemoveProductFromCartAction,
+  CalcCartTotalValueAction,
+  ClearCart,
+} from './types/action';
 
-export const addProductToCart: ActionCreator<Action> = (product: IProduct) => {
+function addProductToCart(product: IProduct): AddProductToCartAction {
   return {
     type: ActionTypes.addProductToCart,
     payload: { product },
   };
-};
+}
 
-export const decreaseCartProduct: ActionCreator<Action> = (
-  productId: number,
-) => {
+function decreaseCartProduct(productId: number): DecreaseCartProductAction {
   return {
     type: ActionTypes.decreaseCartProduct,
     payload: { productId },
   };
-};
+}
 
-export const increaseCartProduct: ActionCreator<Action> = (
-  productId: number,
-) => {
+function increaseCartProduct(productId: number): IncreaseCartProductAction {
   return {
     type: ActionTypes.increaseCartProduct,
     payload: { productId },
   };
-};
+}
 
-export const removeProductFromCart: ActionCreator<Action> = (
-  productId: number,
-) => {
+function removeProductFromCart(productId: number): RemoveProductFromCartAction {
   return {
     type: ActionTypes.removeProductFromCart,
     payload: { productId },
   };
-};
+}
 
-export const calcCartTotalValue: ActionCreator<Action> = () => {
+function calcCartTotalValue(): CalcCartTotalValueAction {
   return {
     type: ActionTypes.calcCartTotalValue,
   };
+}
+
+function clearCart(): ClearCart {
+  return {
+    type: ActionTypes.clearCart,
+  };
+}
+
+export {
+  addProductToCart,
+  decreaseCartProduct,
+  increaseCartProduct,
+  removeProductFromCart,
+  calcCartTotalValue,
+  clearCart,
 };

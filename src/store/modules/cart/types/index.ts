@@ -1,18 +1,20 @@
+import { CategoryType } from '../../../../pages/Home/types';
+
 export interface IProduct {
   id: number;
+  idCategory: CategoryType;
   name: string;
-  idCategory: number;
   description: string;
-  image: string;
   price: number;
-}
-
-export interface ICartItem {
-  product: IProduct;
+  image: string;
+  priceFormatted: string;
+  icon: string;
+  iconName: string;
   quantity: number;
 }
 
 export interface ICartState {
-  items: ICartItem[];
+  items: IProduct[];
   totalAmount: number;
+  cartTimeout: Date | null;
 }

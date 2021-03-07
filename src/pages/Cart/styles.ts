@@ -4,6 +4,8 @@ import { AppColors, FontWeights } from '../../styles/types';
 import { fontSizes } from '../../styles/constants';
 
 export const Container = styled.div`
+  height: 100vh;
+
   .cart__wrapper {
     display: flex;
     align-items: flex-start;
@@ -21,6 +23,28 @@ export const CartProductList = styled.div`
 export const CartProductItem = styled.div`
   background: ${AppColors.WHITE_COLOR};
   border: 1px solid ${AppColors.LIGHT_BACKGROUND};
+  position: relative;
+
+  .cart__productItem--categoryType {
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    border: 1px solid ${AppColors.LIGHT_BACKGROUND};
+    background: ${AppColors.LIGHT_MAIN_COLOR};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
 
   height: 120px;
   padding: 18px;
@@ -31,7 +55,7 @@ export const CartProductItem = styled.div`
   grid-gap: 8px;
   text-align: left;
 
-  > div:first-of-type {
+  .cart__productItem--image {
     border-right: 1px solid ${AppColors.LIGHT_BACKGROUND};
     height: 80px;
     width: 88px;

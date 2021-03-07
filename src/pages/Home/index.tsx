@@ -7,21 +7,19 @@ import { priceFormatter } from '../../utils';
 import Header from '../../components/Header';
 import Search from '../../components/Search';
 import Button from '../../components/Button';
-import Footer from '../../components/Footer';
+
+import { useModal } from '../../hooks/Modal';
 
 import banner from '../../assets/banner.svg';
 import sodaCup from '../../assets/soda-cup.png';
 import chocolate from '../../assets/chocolate.svg';
 import sandwich from '../../assets/sandwich.svg';
 
+import { IProduct } from '../../store/modules/cart/types';
+
 import { MaxContentSizeWrapper } from '../../styles/constants';
 
-import {
-  CategoryResponse,
-  CategoryState,
-  ProductResponse,
-  ProductState,
-} from './types';
+import { CategoryResponse, CategoryState, ProductResponse } from './types';
 
 import {
   Container,
@@ -35,12 +33,27 @@ import {
 
 const Home: React.FC = () => {
   const [categories, setCategories] = useState<CategoryState[]>([]);
-  const [products, setProducts] = useState<ProductState[]>([]);
+  const [products, setProducts] = useState<Omit<IProduct, 'quantity'>[]>([]);
   const [, setProductsCount] = useState(0);
+
+  const { showProductItemModal } = useModal();
 
   const handleSearch = useCallback((text: string) => {
     console.log(text);
   }, []);
+
+  const handleShowProductItemModal = useCallback(
+    (productId: number) => {
+      const productSelected = products.find(
+        product => product.id === productId,
+      );
+
+      if (productSelected) {
+        showProductItemModal(productSelected);
+      }
+    },
+    [products, showProductItemModal],
+  );
 
   useEffect(() => {
     Promise.all([
@@ -93,7 +106,10 @@ const Home: React.FC = () => {
         <ProductList>
           {products.map(
             ({ id, image, name, icon, iconName, priceFormatted }) => (
-              <ProductListItem key={id}>
+              <ProductListItem
+                key={id}
+                onClick={() => handleShowProductItemModal(id)}
+              >
                 <div>
                   <img src={image} alt={name} />
                 </div>
@@ -122,8 +138,6 @@ const Home: React.FC = () => {
           Carregar mais produtos
         </Button>
       </MaxContentSizeWrapper>
-
-      <Footer />
     </Container>
   );
 };

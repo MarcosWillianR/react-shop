@@ -1,4 +1,4 @@
-enum CategoryType {
+export enum CategoryType {
   Bebidas = 0,
   Doces = 1,
   Salgados = 2,
@@ -21,12 +21,6 @@ interface ProductItem {
 export interface ProductResponse {
   count: number;
   items: ProductItem[];
-}
-
-export interface ProductState extends ProductItem {
-  priceFormatted: string;
-  icon: string;
-  iconName: string;
 }
 
 export interface CategoryState extends CategoryResponse {

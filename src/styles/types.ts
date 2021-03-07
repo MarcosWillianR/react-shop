@@ -22,4 +22,5 @@ export enum AppColors {
   TEXT_COLOR = '#11151C',
   PLACEHOLDER_TEXT_COLOR = '#ACACAD',
   MODAL_BACKGROUND = 'rgba(0,0,0, 0.6)',
+  SUCCESS_COLOR = '#5cb85c',
 }
