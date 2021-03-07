@@ -9,18 +9,13 @@ export interface CategoryResponse {
   name: 'Bebidas' | 'Doces' | 'Salgados';
 }
 
-interface ProductItem {
+export interface ProductItem {
   id: number;
   idCategory: CategoryType;
   name: string;
   description: string;
   price: number;
   image: string;
-}
-
-export interface ProductResponse {
-  count: number;
-  items: ProductItem[];
 }
 
 export interface CategoryState extends CategoryResponse {

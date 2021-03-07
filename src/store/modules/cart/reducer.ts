@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import produce from 'immer';
-import { addSeconds } from 'date-fns';
+import { addMinutes } from 'date-fns';
 
 import { ICartState } from './types';
 import { Action, ActionTypes } from './types/action';
@@ -18,7 +18,7 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action: Action) => {
         const { product } = action.payload;
 
         if (!draft.items.length && !draft.cartTimeout) {
-          draft.cartTimeout = addSeconds(new Date(), 10);
+          draft.cartTimeout = addMinutes(new Date(), 15);
         }
 
         const productAlreadyInCartIndex = draft.items.findIndex(

@@ -1,180 +1,181 @@
 {
-  "products": {
-      "count": 20,
-      "items": [
-        {
-          "id": 1,
-          "idCategory": 0,
-          "name": "Bebida Láctea Danone Paulista Morango 540g",
-          "description": "Bebida Láctea Integral Danone em bandeja com 6 unidades",
-          "price": 3.50,
-          "image": "https://carrefourbrfood.vtexassets.com/arquivos/ids/192202-160-160"
-        },
-        {
-          "id": 2,
-          "idCategory": 0,
-          "name": "Refrigerante Guaraná Antarctica Diet 2 Litros",
-          "description": "Zero Açúcar; Original do Brasil; Sabor Inconfundível; Leve e Refrescante",
-          "price": 5.50,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/8969236-1200-auto"
-        },
-        {
-          "id": 3,
-          "idCategory": 0,
-          "name": "Coca-Cola sem Açúcar 1,5 Litros",
-          "description": "Sem adição de açúcar; Refrescante; Aroma delicado; Coca-Cola Zero em garrafa de 1.5l",
-          "price": 4.99,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/190158-1200-auto"
-        },
-        {
-          "id": 4,
-          "idCategory": 0,
-          "name": "Refrigerante Guaraná Antarctica Caçulinha 237ml",
-          "description": "Original do Brasil; Refrigerante de guaraná; Não contém glútem",
-          "price": 1.05,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/189948-1200-auto"
-        },
-        {
-          "id": 5,
-          "idCategory": 0,
-          "name": "Refrigerante Antarctica Limão Diet 350ml",
-          "description": "Zero açúcar; Conservar entre 13 e 15°; Aroma natural; Refrigerante Antarctica Diet sabor limão 350ml",
-          "price": 1.99,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/191794-1200-auto"
-        },
-        {
-          "id": 6,
-          "idCategory": 1,
-          "name": "Tortinhas Doce Chocolate com Isabela 160g",
-          "description": "Pacote de Tortinhas de Chocolate 160g",
-          "price": 2.45,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/205824-1200-auto"
-        },
-        {
-          "id": 7,
-          "idCategory": 1,
-          "name": "Wafer Chocolate Carrefour Triplo 165g",
-          "description": "3 camadas de recheio; Contém Lactose; Baixo teor de sódio; Sem gorduras trans",
-          "price": 1.99,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/193975-1200-auto"
-        },
-        {
-          "id": 8,
-          "idCategory": 1,
-          "name": "Wafer de Chocolate Bauducco 140g",
-          "description": "3 camadas de recheio; Contém Lactose; Baixo teor de sódio; Sem gorduras trans",
-          "price": 2.65,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/193973-1200-auto"
-        },
-        {
-          "id": 9,
-          "idCategory": 1,
-          "name": "Ovo de Páscoa de Chocolate Branco com Recheio na Casca Ouro Branco Lacta 359 g Número 20",
-          "description": "O ovo de páscoa feito de chocolate é opção para presentear e também se deliciar!",
-          "price": 38.90,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/12976444-1200-auto"
-        },
-        {
-          "id": 10,
-          "idCategory": 1,
-          "name": "Biscoito Recheado de Chocolate e Morango Trakinas 126g",
-          "description": "1 Pacote de Biscoito Recheado de Chocolate e Morango Trakinas 126g",
-          "price": 2.30,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/217204-1200-auto"
-        },
-        {
-          "id": 11,
-          "idCategory": 1,
-          "name": "Mini Biscoito de Chocolate Marilan Teens 30g",
-          "description": "Mini biscoito recheado Marilan Teens. Fonte de cálcio e vitaminas! O tamanho ideal para levar no rolê.",
-          "price": 1.29,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/215757-1200-auto"
-        },
-        {
-          "id": 12,
-          "idCategory": 1,
-          "name": "Barra de Chocolate ao Leite Lacta 90g",
-          "description": "1 Barra de Chocolate ao Leite Lacta 90g",
-          "price": 4.50,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/207474-1200-auto"
-        },
-        {
-          "id": 13,
-          "idCategory": 2,
-          "name": "Salgadinho Fandangos Sabor Queijo 140g",
-          "description": "As conchinhas de milho mais famosas do Brasil! Fandangos é produzido com uma massa feita de milho, que passa por um molde para ganhar seu formato e, em seguida, é assada num forno com alta temperatura. Então, as conchinhas recebem o aroma e o óleo de girassol, ingrediente rico em Ômega 6.",
-          "price": 7.40,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705363-1200-auto"
-        },
-        {
-          "id": 14,
-          "idCategory": 2,
-          "name": "Batata Frita Pringles Original 114g",
-          "description": "Batata Frita Pringles Original 114g é crocante e saborosa do jeito que você gosta. Perfeita para todos os momentos. Compartilhe com seus amigos! ",
-          "price": 9.99,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/218459-1200-auto"
-        },
-        {
-          "id": 15,
-          "idCategory": 2,
-          "name": "Salgadinho Doritos Sabor Queijo Nacho 84g",
-          "description": "Doritos é para aqueles que querem sair do óbvio, que buscam sempre desafiar a lógica do senso comum. E se você é um desses que nem sempre quer fazer sentido, você é dos nossos.",
-          "price": 6.39,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705347-1200-auto"
-        },
-        {
-          "id": 16,
-          "idCategory": 2,
-          "name": "Salgadinho Pingo D'Ouro Bacon 130g",
-          "description": "Lançado a décadas, o Pingo D’Ouro é o snack tradicional a base de trigo da linha Elma Chips, experimente o irresistível salgadinho sabor bacon.",
-          "price": 5.99,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/217772-1200-auto"
-        },
-        {
-          "id": 17,
-          "idCategory": 2,
-          "name": "Batata Frita Ruffles Sabor Cebola e Salsa 84g",
-          "description": "Ruffles, marca líder do mercado de batata chips no Brasil, é a batata que une a galera. Com muita crocância e sabor, o portfólio de Ruffles conta com as versões original, cebola e salsa, churrasco e queijo.",
-          "price": 6.25,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705422-1200-auto"
-        },
-        {
-          "id": 18,
-          "idCategory": 2,
-          "name": "Salgadinho Baconzitos Elma Chips 103g",
-          "description": "1 Pacote de Salgadinho Elma Chips com 103g",
-          "price": 9.89,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/199041-1200-auto"
-        },
-        {
-          "id": 19,
-          "idCategory": 0,
-          "name": "Refrigerante Sukita Laranja 350ml",
-          "description": "Aroma natural; Conservar entre 13 e 15°; Não contém glúten; Refrigerante Sukita laranja com 350 ml",
-          "price": 2.07,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/191784-1200-auto"
-        },
-        {
-          "id": 20,
-          "idCategory": 1,
-          "name": "Ovo de Páscoa de Chocolate ao Leite Batman Lacta 166 g Número 15",
-          "description": "O ovo de páscoa feito de chocolate é opção para presentear e também se deliciar!",
-          "price": 39.90,
-          "image": "https://carrefourbr.vtexassets.com/arquivos/ids/12976442-1200-auto"
-        }
-      ]
-    },
-  "categories": [
-    {
-      "id": 0,
-      "name": "Bebidas"
-    },
+  "products": [
     {
       "id": 1,
-      "name": "Doces"
+      "idCategory": 1,
+      "name": "Bebida Láctea Danone Paulista Morango 540g",
+      "description": "Bebida Láctea Integral Danone em bandeja com 6 unidades",
+      "price": 3.50,
+      "image": "https://carrefourbrfood.vtexassets.com/arquivos/ids/192202-160-160"
     },
     {
       "id": 2,
+      "idCategory": 1,
+      "name": "Refrigerante Guaraná Antarctica Diet 2 Litros",
+      "description": "Zero Açúcar; Original do Brasil; Sabor Inconfundível; Leve e Refrescante",
+      "price": 5.50,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/8969236-1200-auto"
+    },
+    {
+      "id": 3,
+      "idCategory": 1,
+      "name": "Coca-Cola sem Açúcar 1,5 Litros",
+      "description": "Sem adição de açúcar; Refrescante; Aroma delicado; Coca-Cola Zero em garrafa de 1.5l",
+      "price": 4.99,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/190158-1200-auto"
+    },
+    {
+      "id": 4,
+      "idCategory": 1,
+      "name": "Refrigerante Guaraná Antarctica Caçulinha 237ml",
+      "description": "Original do Brasil; Refrigerante de guaraná; Não contém glútem",
+      "price": 1.05,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/189948-1200-auto"
+    },
+    {
+      "id": 5,
+      "idCategory": 1,
+      "name": "Refrigerante Antarctica Limão Diet 350ml",
+      "description": "Zero açúcar; Conservar entre 13 e 15°; Aroma natural; Refrigerante Antarctica Diet sabor limão 350ml",
+      "price": 1.99,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/191794-1200-auto"
+    },
+    {
+      "id": 6,
+      "idCategory": 2,
+      "name": "Tortinhas Doce Chocolate com Isabela 160g",
+      "description": "Pacote de Tortinhas de Chocolate 160g",
+      "price": 2.45,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/205824-1200-auto"
+    },
+    {
+      "id": 7,
+      "idCategory": 2,
+      "name": "Wafer Chocolate Carrefour Triplo 165g",
+      "description": "3 camadas de recheio; Contém Lactose; Baixo teor de sódio; Sem gorduras trans",
+      "price": 1.99,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/193975-1200-auto"
+    },
+    {
+      "id": 8,
+      "idCategory": 2,
+      "name": "Wafer de Chocolate Bauducco 140g",
+      "description": "3 camadas de recheio; Contém Lactose; Baixo teor de sódio; Sem gorduras trans",
+      "price": 2.65,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/193973-1200-auto"
+    },
+    {
+      "id": 9,
+      "idCategory": 2,
+      "name": "Ovo de Páscoa de Chocolate Branco com Recheio na Casca Ouro Branco Lacta 359 g Número 20",
+      "description": "O ovo de páscoa feito de chocolate é opção para presentear e também se deliciar!",
+      "price": 38.90,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/12976444-1200-auto"
+    },
+    {
+      "id": 10,
+      "idCategory": 2,
+      "name": "Biscoito Recheado de Chocolate e Morango Trakinas 126g",
+      "description": "1 Pacote de Biscoito Recheado de Chocolate e Morango Trakinas 126g",
+      "price": 2.30,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/217204-1200-auto"
+    },
+    {
+      "id": 11,
+      "idCategory": 2,
+      "name": "Mini Biscoito de Chocolate Marilan Teens 30g",
+      "description": "Mini biscoito recheado Marilan Teens. Fonte de cálcio e vitaminas! O tamanho ideal para levar no rolê.",
+      "price": 1.29,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/215757-1200-auto"
+    },
+    {
+      "id": 12,
+      "idCategory": 2,
+      "name": "Barra de Chocolate ao Leite Lacta 90g",
+      "description": "1 Barra de Chocolate ao Leite Lacta 90g",
+      "price": 4.50,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/207474-1200-auto"
+    },
+    {
+      "id": 13,
+      "idCategory": 3,
+      "name": "Salgadinho Fandangos Sabor Queijo 140g",
+      "description": "As conchinhas de milho mais famosas do Brasil! Fandangos é produzido com uma massa feita de milho, que passa por um molde para ganhar seu formato e, em seguida, é assada num forno com alta temperatura. Então, as conchinhas recebem o aroma e o óleo de girassol, ingrediente rico em Ômega 6.",
+      "price": 7.40,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705363-1200-auto"
+    },
+    {
+      "id": 14,
+      "idCategory": 3,
+      "name": "Batata Frita Pringles Original 114g",
+      "description": "Batata Frita Pringles Original 114g é crocante e saborosa do jeito que você gosta. Perfeita para todos os momentos. Compartilhe com seus amigos! ",
+      "price": 9.99,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/218459-1200-auto"
+    },
+    {
+      "id": 15,
+      "idCategory": 3,
+      "name": "Salgadinho Doritos Sabor Queijo Nacho 84g",
+      "description": "Doritos é para aqueles que querem sair do óbvio, que buscam sempre desafiar a lógica do senso comum. E se você é um desses que nem sempre quer fazer sentido, você é dos nossos.",
+      "price": 6.39,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705347-1200-auto"
+    },
+    {
+      "id": 16,
+      "idCategory": 3,
+      "name": "Salgadinho Pingo D'Ouro Bacon 130g",
+      "description": "Lançado a décadas, o Pingo D’Ouro é o snack tradicional a base de trigo da linha Elma Chips, experimente o irresistível salgadinho sabor bacon.",
+      "price": 5.99,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/217772-1200-auto"
+    },
+    {
+      "id": 17,
+      "idCategory": 3,
+      "name": "Batata Frita Ruffles Sabor Cebola e Salsa 84g",
+      "description": "Ruffles, marca líder do mercado de batata chips no Brasil, é a batata que une a galera. Com muita crocância e sabor, o portfólio de Ruffles conta com as versões original, cebola e salsa, churrasco e queijo.",
+      "price": 6.25,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/5705422-1200-auto"
+    },
+    {
+      "id": 18,
+      "idCategory": 3,
+      "name": "Salgadinho Baconzitos Elma Chips 103g",
+      "description": "1 Pacote de Salgadinho Elma Chips com 103g",
+      "price": 9.89,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/199041-1200-auto"
+    },
+    {
+      "id": 19,
+      "idCategory": 1,
+      "name": "Refrigerante Sukita Laranja 350ml",
+      "description": "Aroma natural; Conservar entre 13 e 15°; Não contém glúten; Refrigerante Sukita laranja com 350 ml",
+      "price": 2.07,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/191784-1200-auto"
+    },
+    {
+      "id": 20,
+      "idCategory": 2,
+      "name": "Ovo de Páscoa de Chocolate ao Leite Batman Lacta 166 g Número 15",
+      "description": "O ovo de páscoa feito de chocolate é opção para presentear e também se deliciar!",
+      "price": 39.90,
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/12976442-1200-auto"
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "Todos"
+    },
+    {
+      "id": 1,
+      "name": "Bebidas"
+    },
+    {
+      "id": 2,
+      "name": "Doces"
+    },
+    {
+      "id": 3,
       "name": "Salgados"
     }
   ]

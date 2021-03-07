@@ -19,7 +19,7 @@ import {
 
 import { useModal } from '../../hooks/Modal';
 
-import { priceFormatter, getDateDifference } from '../../utils';
+import { priceFormatter, getDateDifference, debounce } from '../../utils';
 
 import { MaxContentSizeWrapper, defaultIconSize } from '../../styles/constants';
 import { AppColors } from '../../styles/types';
@@ -49,9 +49,14 @@ const Cart: React.FC = () => {
 
   const [countdownCart, setCountdownCart] = useState('00:00');
 
-  const handleSearch = useCallback((text: string) => {
-    console.log(text);
-  }, []);
+  const handleSearch = useCallback(
+    (text: string) => {
+      debounce(() => {
+        history.push(`/?search_text=${text}`);
+      }, 500);
+    },
+    [history],
+  );
 
   const totalProductItemValueFormatted = useCallback(
     (quantity: number, price: number) => priceFormatter(price * quantity),
@@ -75,9 +80,9 @@ const Cart: React.FC = () => {
     totalAmount,
   ]);
 
-  const showEndCountDownModal = useCallback(() => {
-    if (!infoModalIsVisible) {
-      return showInfoModal({
+  const showEndCountDownModal = useCallback(
+    () =>
+      showInfoModal({
         infoStatus: 'warning',
         title: 'Tempo esgotado, produtos removidos do carrinho',
         description:
@@ -87,11 +92,9 @@ const Cart: React.FC = () => {
           closeInfoModal();
           history.push('/');
         },
-      });
-    }
-
-    return null;
-  }, [closeInfoModal, dispatch, history, infoModalIsVisible, showInfoModal]);
+      }),
+    [closeInfoModal, dispatch, history, showInfoModal],
+  );
 
   const handleFinishPayment = useCallback(() => {
     if (!infoModalIsVisible) {

@@ -40,8 +40,6 @@ export const CategorySelectButton = styled.button`
   }
 
   img {
-    width: 44px;
-    height: 44px;
     opacity: 1;
   }
 
