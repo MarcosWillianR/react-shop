@@ -6,7 +6,7 @@ import { AppColors, FontWeights } from '../../styles/types';
 export const Container = styled.div``;
 
 export const BannerContent = styled.div`
-  margin: 32px 0;
+  margin-bottom: 32px;
 
   img {
     box-shadow: ${DefaultBoxShadow};
@@ -67,13 +67,14 @@ export const CategorySelectButton = styled.button`
 export const ProductList = styled.main`
   display: grid;
   grid-template-columns: repeat(3, 319px);
-  grid-gap: 32px;
+  grid-gap: 30px;
   margin: 32px 0;
 `;
 
 export const ProductListItem = styled.button`
   background: ${AppColors.WHITE_COLOR};
   border: 1px solid ${AppColors.LIGHT_BACKGROUND};
+
   height: 120px;
   padding: 18px;
 

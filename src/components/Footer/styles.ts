@@ -30,7 +30,7 @@ export const Container = styled.footer`
     }
   }
 
-  button {
+  .footer__alignment-wrapper > button {
     width: 34px;
     height: 34px;
     border-radius: 17px;

@@ -22,10 +22,12 @@ const MaxContentSizeWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const LogoTitle = styled.span`
+const LogoTitle = styled.button`
   font-size: ${fontSizes.MEDIUM};
   font-weight: ${FontWeights.BOLD};
   color: ${AppColors.MAIN_COLOR};
+  border: 0;
+  background: 0;
 `;
 
 const DefaultBoxShadow = '1px 1px 2px rgba(0, 0, 0, 0.15)';

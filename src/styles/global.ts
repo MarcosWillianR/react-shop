@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   html, body {
-    min-width: 1020px;
+    min-width: 865px;
   }
 
   img {

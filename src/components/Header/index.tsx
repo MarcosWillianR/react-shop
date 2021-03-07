@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Cart from '../Cart';
 import { SearchProps } from '../Search';
@@ -12,18 +13,22 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ SearchComponent }) => {
+  const history = useHistory();
+
   return (
-    <Container>
-      <MaxContentSizeWrapper className="header__flex-wrapper">
-        <div className="header__logo-search-wrapper">
-          <LogoTitle>RosaMarket</LogoTitle>
+    <div style={{ marginBottom: 102 }}>
+      <Container>
+        <MaxContentSizeWrapper className="header__flex-wrapper">
+          <div className="header__logo-search-wrapper">
+            <LogoTitle onClick={() => history.push('/')}>RosaMarket</LogoTitle>
 
-          {SearchComponent && SearchComponent}
-        </div>
+            {SearchComponent && SearchComponent}
+          </div>
 
-        <Cart />
-      </MaxContentSizeWrapper>
-    </Container>
+          <Cart />
+        </MaxContentSizeWrapper>
+      </Container>
+    </div>
   );
 };
 

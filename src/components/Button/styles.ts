@@ -21,15 +21,8 @@ export const Container = styled.button<ContainerProps>`
 
   background: ${AppColors.MAIN_COLOR};
   color: ${AppColors.WHITE_COLOR};
-
-  font-size: ${fontSizes.XSMALL};
   font-weight: ${FontWeights.REGULAR};
-
-  transition: opacity 0.3s;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  font-size: ${fontSizes.XSMALL};
 
   ${({ size }) =>
     size === 'medium' &&
@@ -37,4 +30,12 @@ export const Container = styled.button<ContainerProps>`
       height: 48px;
       font-size: ${fontSizes.LARGE};
     `};
+
+  opacity: 1;
+
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;

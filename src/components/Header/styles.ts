@@ -9,6 +9,14 @@ export const Container = styled.div`
 
   height: 70px;
 
+  min-width: 865px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+
   padding-left: ${defaultContainerHorizontalPadding};
   padding-right: ${defaultContainerHorizontalPadding};
 
@@ -24,7 +32,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    > span {
+    > button {
       margin-right: 32px;
     }
   }
