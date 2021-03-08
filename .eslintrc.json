@@ -22,7 +22,9 @@
     "@typescript-eslint/no-unused-vars": "error",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", {
+      "endOfLine":"auto"
+    }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-use-before-define": "off",
