@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { DefaultBoxShadow, fontSizes } from '../../styles/constants';
 import { AppColors, FontWeights } from '../../styles/types';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  min-height: 100vh;
+`;
 
 export const BannerContent = styled.div`
   margin-bottom: 32px;

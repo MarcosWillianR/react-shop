@@ -6,7 +6,7 @@ import {
   IncreaseCartProductAction,
   RemoveProductFromCartAction,
   CalcCartTotalValueAction,
-  ClearCart,
+  ClearCartAction,
 } from './types/action';
 
 function addProductToCart(product: IProduct): AddProductToCartAction {
@@ -43,7 +43,7 @@ function calcCartTotalValue(): CalcCartTotalValueAction {
   };
 }
 
-function clearCart(): ClearCart {
+function clearCart(): ClearCartAction {
   return {
     type: ActionTypes.clearCart,
   };

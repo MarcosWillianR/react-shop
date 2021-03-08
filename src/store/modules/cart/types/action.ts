@@ -41,7 +41,7 @@ export interface CalcCartTotalValueAction {
   type: ActionTypes.calcCartTotalValue;
 }
 
-export interface ClearCart {
+export interface ClearCartAction {
   type: ActionTypes.clearCart;
 }
 
@@ -51,4 +51,4 @@ export type Action =
   | IncreaseCartProductAction
   | RemoveProductFromCartAction
   | CalcCartTotalValueAction
-  | ClearCart;
+  | ClearCartAction;

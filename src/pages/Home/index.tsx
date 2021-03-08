@@ -118,11 +118,13 @@ const Home: React.FC = () => {
   );
 
   useEffect(() => {
+    const isValidSearch = search ? search.startsWith('?search_text=') : false;
+
     Promise.all([
       api.get<CategoryResponse[]>('categories'),
       api.get<ProductItem[]>('products', {
         params: {
-          name_like: search ? search.replace('?search_text=', '') : '',
+          name_like: isValidSearch ? search.replace('?search_text=', '') : '',
         },
       }),
     ])
